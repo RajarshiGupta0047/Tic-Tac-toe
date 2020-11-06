@@ -1,0 +1,17 @@
+
+<h1>Welcome to Rajarshis tictacToe!! Enjoy :)</h1>
+<h1>Current Player:{{player}}</h1>
+<button (click)="newGame()">Start New Game</button>
+<h2 *ngIf="winner">
+  Player {{winner}} won the game!!</h2>
+  
+  <main>
+    <app-square
+    *ngFor="let item of squares;let i=index"
+    [value]="item"
+    (click)=makeMove(i)>
+      </app-square>
+    </main>
+    <h6>****Player 1 plays "X"</h6>
+    <h6>****Player 2 plays "0"</h6>
+    
